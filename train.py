@@ -13,9 +13,9 @@ MODEL_FILE = "models/anomaly_model.pkl"
 # =========================
 # Week 4: Override using YAML config
 # =========================
-# cfg = yaml.safe_load(open("config.yaml"))
-# TRAIN_FILE = cfg.get("train_file", TRAIN_FILE)   # fallback to default
-# MODEL_FILE = cfg.get("model_file", MODEL_FILE)
+cfg = yaml.safe_load(open("config.yaml"))
+TRAIN_FILE = cfg.get("train_file", TRAIN_FILE)   # fallback to default
+MODEL_FILE = cfg.get("model_file", MODEL_FILE)
 
 # =========================
 # Read and featurize logs
